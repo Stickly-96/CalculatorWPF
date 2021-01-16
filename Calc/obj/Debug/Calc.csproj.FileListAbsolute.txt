@@ -1,0 +1,15 @@
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\bin\Debug\Calc.exe.config
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\bin\Debug\Calc.exe
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\bin\Debug\Calc.pdb
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.csprojAssemblyReference.cache
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\MainWindow.g.cs
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\App.g.cs
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc_MarkupCompile.cache
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc_MarkupCompile.lref
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\MainWindow.baml
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.g.resources
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.Properties.Resources.resources
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.csproj.GenerateResource.cache
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.csproj.CoreCompileInputs.cache
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.exe
+C:\Users\Admin\Documents\Projects_C#\Calc\Calc\obj\Debug\Calc.pdb
