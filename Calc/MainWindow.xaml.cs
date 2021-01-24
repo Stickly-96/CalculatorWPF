@@ -20,32 +20,31 @@ namespace Calc
     /// </summary>
     public partial class MainWindow : Window
     {
-        int num1 = 0;
-        int num2 = 0;
+        double num1 = 0;
+        double num2 = 0;
         string op = "";
-
-
         public MainWindow()
         {
             InitializeComponent();
         }
 
-        
         private void btn_num_Click(object sender, RoutedEventArgs e)
         {
             Button button = (Button)sender;
-            String str = button.Content.ToString();
-            int num = Int32.Parse(str);
+            String num = button.Content.ToString();
+            if (txtValue.Text == "0")
+                txtValue.Text = num;
+            else
+                txtValue.Text += num;
+
 
             if (op == "")
             {
-                num1 = num1 * 10 + num;
-                txtValue.Text = num1.ToString();
+                num1 = Double.Parse(txtValue.Text);
             }
             else
             {
-                num2 = num2 * 10 + num;
-                txtValue.Text = num2.ToString();
+                num2 = Double.Parse(txtValue.Text);
             }
         }
 
@@ -53,14 +52,13 @@ namespace Calc
         {
             Button button = (Button)sender;
             op = button.Content.ToString();
-
-
+            txtValue.Text = "0";
         }
 
         private void btn_eq_Click(object sender, RoutedEventArgs e)
         {
-            int result = 0;
-            switch(op)
+            double result = 0;
+            switch (op)
             {
                 case "+":
                     result = num1 + num2;
@@ -84,22 +82,22 @@ namespace Calc
                     result = (num1 + num2) / 2;
                     break;
                 case "x^y":
-                    result = Pow(num1, num2);
+                    result = Pow(num1, (int) num2);
                     break;
-
             }
+
             txtValue.Text = result.ToString();
             op = "";
             num1 = result;
+            num2 = 0;
         }
 
-        // x^4 = x * x * x * x * x^3 *x;
-        // x^3 = x * x * x * x^2 * x;
-        // x^2 = x * x * x^1 * x;
-        // x^1 = x * x*0 * x;
+        // x^4 = x * x * x * x = x^3 * x;
+        // x^3 = x * x * x = x^2 * x;
+        // x^2 = x * x = x^1 * x;
+        // x^1 = x = x^0 * x;
         // x^0 = 1;
-
-        private int Pow(int x, int y)
+        private double Pow(double x, int y)
         {
             if (y == 0)
                 return 1;
@@ -113,12 +111,11 @@ namespace Calc
             num2 = 0;
             op = "";
             txtValue.Text = "0";
-
         }
 
         private void btn_CE_Click(object sender, RoutedEventArgs e)
         {
-            if (op == "")
+            if(op == "")
             {
                 num1 = 0;
             }
@@ -131,30 +128,61 @@ namespace Calc
 
         private void btn_backspace_Click(object sender, RoutedEventArgs e)
         {
+            txtValue.Text = DropLastChar(txtValue.Text);
             if (op == "0")
             {
-                num1 = num1 / 10;
-                txtValue.Text = num1.ToString();
+                num1 = Double.Parse(txtValue.Text);
             }
             else
             {
-                num2 = num2 / 10;
-                txtValue.Text = num2.ToString();
+                num2 = Double.Parse(txtValue.Text);
             }
+        }
+
+        private string DropLastChar(string text)
+        {
+            if (text.Length == 1)
+                text = "0";
+            
+            else
+            {
+                text = text.Remove(text.Length - 1, 1);
+                if (text[text.Length - 1] == ',')
+                    text = text.Remove(text.Length - 1, 1);
+
+            }
+
+            return text;
         }
 
         private void btn_plusminus_Click(object sender, RoutedEventArgs e)
         {
-            if (op == "")
+            if(op == "")
             {
                 num1 *= -1;
                 txtValue.Text = num1.ToString();
             }
             else
             {
-                num2 *= num2;
+                num2 *= -1;
                 txtValue.Text = num2.ToString();
             }
+        }
+
+        private void btn_comma_Click(object sender, RoutedEventArgs e)
+        {
+            if (op == "")
+                SetComma(num1);
+            else
+                SetComma(num2);
+        }
+
+        private void SetComma(double num)
+        {
+            if (txtValue.Text.Contains(','))
+                return;
+            
+            txtValue.Text += ',';
         }
 
 
