@@ -4,9 +4,8 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calc"
-        mc:Ignorable="d"
-        Title="Calculator" Height="450" Width="300">
-    <Grid>
+        mc:Ignorable="d" Height="450" Width="300" Visibility="Visible" IsTabStop="True" Icon="ico.png">
+    <Grid Background="#FFD0B798">
         <Grid.ColumnDefinitions>
             <ColumnDefinition />
             <ColumnDefinition />
@@ -25,41 +24,41 @@
         </Grid.RowDefinitions>
         
         <!-- Buttons numbers -->
-        <Button Grid.Row="3" Grid.Column="0" x:Name="btn_7" Click="btn_num_Click">7</Button>
-        <Button Grid.Row="3" Grid.Column="1" x:Name="btn_8" Click="btn_num_Click">8</Button>
-        <Button Grid.Row="3" Grid.Column="2" x:Name="btn_9" Click="btn_num_Click">9</Button>
-        <Button Grid.Row="4" Grid.Column="0" x:Name="btn_4" Click="btn_num_Click">4</Button>
-        <Button Grid.Row="4" Grid.Column="1" x:Name="btn_5" Click="btn_num_Click">5</Button>
-        <Button Grid.Row="4" Grid.Column="2" x:Name="btn_6" Click="btn_num_Click">6</Button>
-        <Button Grid.Row="5" Grid.Column="0" x:Name="btn_1" Click="btn_num_Click">1</Button>
-        <Button Grid.Row="5" Grid.Column="1" x:Name="btn_2" Click="btn_num_Click">2</Button>
-        <Button Grid.Row="5" Grid.Column="2" x:Name="btn_3" Click="btn_num_Click">3</Button>
-        <Button Grid.Row="6" Grid.Column="1" x:Name="btn_0" Click="btn_num_Click">0</Button>
+        <Button Grid.Row="3" Grid.Column="0" x:Name="btn_7" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">7</Button>
+        <Button Grid.Row="3" Grid.Column="1" x:Name="btn_8" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">8</Button>
+        <Button Grid.Row="3" Grid.Column="2" x:Name="btn_9" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">9</Button>
+        <Button Grid.Row="4" Grid.Column="0" x:Name="btn_4" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">4</Button>
+        <Button Grid.Row="4" Grid.Column="1" x:Name="btn_5" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">5</Button>
+        <Button Grid.Row="4" Grid.Column="2" x:Name="btn_6" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">6</Button>
+        <Button Grid.Row="5" Grid.Column="0" x:Name="btn_1" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">1</Button>
+        <Button Grid.Row="5" Grid.Column="1" x:Name="btn_2" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">2</Button>
+        <Button Grid.Row="5" Grid.Column="2" x:Name="btn_3" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">3</Button>
+        <Button Grid.Row="6" Grid.Column="1" x:Name="btn_0" Click="btn_num_Click" Width="50" Height="40" Background="Black" Foreground="White">0</Button>
         
         <!-- Operations -->
 
-        <Button Grid.Row="1" Grid.Column="0" x:Name="btn_min" Click="btn_op_Click">min</Button>
-        <Button Grid.Row="1" Grid.Column="1" x:Name="btn_max" Click="btn_op_Click">max</Button>
-        <Button Grid.Row="1" Grid.Column="2" x:Name="btn_avg" Click="btn_op_Click">avg</Button>
-        <Button Grid.Row="1" Grid.Column="3" x:Name="btn_pow" Click="btn_op_Click">x^y</Button>
+        <Button Grid.Row="1" Grid.Column="0" x:Name="btn_min" Click="btn_op_Click" Width="50" Height="40" Background="Black" Foreground="White">min</Button>
+        <Button Grid.Row="1" Grid.Column="1" x:Name="btn_max" Click="btn_op_Click" Width="50" Height="40" Background="Black" Foreground="White">max</Button>
+        <Button Grid.Row="1" Grid.Column="2" x:Name="btn_avg" Click="btn_op_Click" Width="50" Height="40" Foreground="White" Background="Black">avg</Button>
+        <Button Grid.Row="1" Grid.Column="3" x:Name="btn_pow" Click="btn_op_Click" Width="50" Height="40" Background="Black" Foreground="White">x^y</Button>
 
-        <Button Grid.Row="2" Grid.Column="3" x:Name="btn_div" Click="btn_op_Click">/</Button>
-        <Button Grid.Row="3" Grid.Column="3" x:Name="btn_mult" Click="btn_op_Click">*</Button>
-        <Button Grid.Row="4" Grid.Column="3" x:Name="btn_minus" Click="btn_op_Click">-</Button>
-        <Button Grid.Row="5" Grid.Column="3" x:Name="btn_plus" Click="btn_op_Click">+</Button>
-        <Button Grid.Row="6" Grid.Column="3" x:Name="btn_eq" Click="btn_eq_Click">=</Button>
+        <Button Grid.Row="2" Grid.Column="3" x:Name="btn_div" Click="btn_op_Click" Width="50" Height="40" Background="#FF00C1FF" Foreground="White">/</Button>
+        <Button Grid.Row="3" Grid.Column="3" x:Name="btn_mult" Click="btn_op_Click" Width="50" Height="40" Background="#FF00C1FF" Foreground="White">*</Button>
+        <Button Grid.Row="4" Grid.Column="3" x:Name="btn_minus" Click="btn_op_Click" Width="50" Height="40" Background="#FF00C1FF" Foreground="White">-</Button>
+        <Button Grid.Row="5" Grid.Column="3" x:Name="btn_plus" Click="btn_op_Click" Width="50" Height="40" Background="#FF00C1FF" Foreground="White">+</Button>
+        <Button Grid.Row="6" Grid.Column="3" x:Name="btn_eq" Click="btn_eq_Click" Width="50" Height="40" Background="Black" Foreground="White">=</Button>
         
-        <Button Grid.Row="6" Grid.Column="2" x:Name="btn_comma" Click="btn_comma_Click">,</Button>
-        <Button Grid.Row="6" Grid.Column="0" x:Name="btn_plusminus" Click="btn_plusminus_Click">+/-</Button>
+        <Button Grid.Row="6" Grid.Column="2" x:Name="btn_comma" Click="btn_comma_Click" Width="50" Height="40" Background="Black" Foreground="White">,</Button>
+        <Button Grid.Row="6" Grid.Column="0" x:Name="btn_plusminus" Click="btn_plusminus_Click" Width="50" Height="40" Background="Black" Foreground="White">+/-</Button>
         
         <!-- Clear buttons -->
 
-        <Button Grid.Row="2" Grid.Column="0" x:Name="btn_C" Click="btn_C_Click">C</Button>
-        <Button Grid.Row="2" Grid.Column="1" x:Name="btn_CE" Click="btn_CE_Click">CE</Button>
-        <Button Grid.Row="2" Grid.Column="2" x:Name="btn_backspace" Content="&lt;=" Click="btn_backspace_Click"></Button>
+        <Button Grid.Row="2" Grid.Column="0" x:Name="btn_C" Click="btn_C_Click" Width="50" Height="40" Foreground="White" Background="Red">C</Button>
+        <Button Grid.Row="2" Grid.Column="1" x:Name="btn_CE" Click="btn_CE_Click" Width="50" Height="40" Background="Red" Foreground="White">CE</Button>
+        <Button Grid.Row="2" Grid.Column="2" x:Name="btn_backspace" Content="&lt;=" Click="btn_backspace_Click" Width="50" Height="40" Foreground="White" Background="Black"></Button>
         
         <!-- Textbox -->
-        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" TextAlignment="Right" VerticalAlignment="Bottom" FontSize="40" x:Name="txtValue">0</TextBox>
+        <TextBox Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="4" TextAlignment="Right" FontSize="40" x:Name="txtValue" Background="#FF0095A4" Foreground="#FF00E8FF" Height="49" Width="269" VerticalAlignment="Bottom">0</TextBox>
 
     </Grid>
 </Window>
